@@ -11,6 +11,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    Route::get('/evento',[App\Http\Controllers\EventoController::class, 'index'] );
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
