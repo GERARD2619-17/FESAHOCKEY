@@ -13,8 +13,10 @@
         
         <!-- Scripts -->
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+        <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
 
         <!-- Styles -->
+        <link href="{{ asset('adminlte/css/adminlte.min.css') }}" rel="stylesheet">
         @livewireStyles
     </head>
     <body class="font-sans antialiased">

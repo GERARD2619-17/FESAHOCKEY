@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -11,8 +12,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/evento',[App\Http\Controllers\EventoController::class, 'index'] );
-
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
