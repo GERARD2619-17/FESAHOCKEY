@@ -10,10 +10,12 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.css">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/locales-all.js"></script>
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -33,9 +35,11 @@
             @endif
 
             <!-- Page Content -->
+            @vite(['resources/scss/app.scss', 'resources/js/app.js'])
             <main>
                 {{ $slot }}
             </main>
+            
         </div>
 
         @stack('modals')
