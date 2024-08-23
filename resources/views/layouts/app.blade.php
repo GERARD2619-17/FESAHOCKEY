@@ -35,7 +35,7 @@
             @endif
 
             <!-- Page Content -->
-            @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+            @vite(['resources/scss/app.scss', 'js/agenda.js'])
             <main>
                 {{ $slot }}
             </main>
